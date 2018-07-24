@@ -29,6 +29,20 @@ header{
     box-sizing: border-box;
 }
 
+#mobile-menu{
+    display: none;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+#mobile-menu span{
+    display:block;
+    height: 2px;
+    width: 30px;
+    margin-bottom: 5px;
+    background: white;
+}
+
 .logo a{
     color: var(--lime);
     font-size: 2em;
@@ -49,11 +63,13 @@ header{
     color: var(--white);
 }
 
-.acount{
+.acount-desc, .acount-mobile{
     margin-top: 5px;
 }
 
-.acount a{
+.acount-mobile{display: none}
+
+.acount-desc a, .acount-mobile a{
     display: block;
     background: var(--lime);
     padding: 5px 10px;
@@ -194,6 +210,21 @@ header{
     border-radius: 5px;
     margin-top: 10px;
 }
+
+.mobile-menu{
+    display: block;
+}
+
+.mobile-menu-list{
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    background: var(--black);
+    text-transform: uppercase;
+    padding: 15px 40%;
+}
+
+.mobile-menu-list li a{color: white;}
 
 .second{
     width: 100%;
@@ -409,3 +440,84 @@ footer{
     margin: 15px;
     cursor: pointer;
 }
+
+@media screen and (max-width: 980px) {
+    nav{display: none}
+    #mobile-menu{display: flex}
+    .acount-mobile{display: block}
+    .acount-desc{display: none}
+    .counter input{width: 40%}
+    .second{flex-direction: column}
+    .left-bar, .right-bar{
+        width: 80%;
+        margin: 10px auto;
+    }
+    .third{
+        padding: 0;
+        margin: 15px auto;
+    }
+    .second-line{
+        flex-direction: column;
+        margin: 15px auto;
+        width: 100%;
+    }
+    #guar, .contact, .pay-services{
+        width: 60%;
+        margin: 10px auto;
+    }
+}
+
+@media screen and (max-width: 765px){
+    .head .info{
+        flex-direction: column;
+    }
+
+    .info .left-box, .info .right-block{
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    .left-bar, .right-bar{
+        width: 100%;
+    }
+    .feature{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 520px){
+    .head{
+        background: #536678;
+    }
+    .feature{
+        margin: 10px auto;
+    }
+    .feature li{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .feature li p{display: none}
+    .feature li img{margin: 2px auto}
+    .description{width: 100%}
+
+    .right-bar{display: none}
+
+
+    #guar{grid-area: guar}
+    .contact{grid-area: contact}
+    .pay-services{grid-area: ps}
+
+    .second-line{
+        display: grid;
+        grid-template-areas: 'guar'
+        'ps'
+        'contact';
+    }
+
+    #guar, .contact, .pay-services{
+        width: 100%;
+    }
+    #btn-to-top{margin-right: 15px}
+}
+
+

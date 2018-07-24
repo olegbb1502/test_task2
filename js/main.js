@@ -38,3 +38,16 @@ function countPrice() {
     if(type == "" && place == "" && days == "" && value == "" || type == "" || place == "" || days == "" || value == "") document.getElementById('error').innerHTML = "Uncorrect values";
 }
 
+
+function showMenu() {
+    var show = false;
+    if(!show){
+        for (var i=0;i<document.getElementsByClassName('mobile-menu-list').length;i+=1){
+            document.getElementsByClassName('mobile-menu-list')[i].style.display = 'flex';
+        }
+        show = true;
+        return show;
+    }
+}
+
+
