@@ -9,12 +9,10 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-
-    <script src="js/main.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">LOGO</div>
+    <header id="header">
+        <div class="logo"><a href="./">LOGO</a></div>
         <nav>
             <ul class="menu-list">
                 <li><a href="">services</a></li>
@@ -45,7 +43,7 @@
                 <div class="right-block">
                     <div class="form">
                         <h3>Price calculator</h3>
-                        <form action="" class="order-form">
+                        <div class="order-form">
                             <select name="type" id="type">
                                 <option value="" disabled selected hidden>Essay(any type)</option>
                                 <option value="Essay">Essay</option>
@@ -58,15 +56,16 @@
                                     <option value="14 days">14 days</option>
                                 </select>
                                 <div class="counter">
-                                    <div class="less"></div>
-                                    <input type="text">
-                                    <div class="more"></div>
+                                    <div class="less" onclick="subtract()">-</div>
+                                    <input type="text" value="1" id="counter">
+                                    <div class="more" onclick="add()">+</div>
                                 </div>
                             </div>
-                            <div class="total-price"><h3>TOTAL:$</h3><h3 class="result-price"></h3></div>
-                            <input type="submit" value="CONTINUE">
+                            <div id="error"></div>
+                            <div class="total-price"><h3>TOTAL :  $ <span id="result-price"></span></h3></div>
+                            <input type="submit" value="CONTINUE" id="submit" onclick="countPrice()">
                             <a href="" class="disc">GET YOUR 10% DISCOUNT</a>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -167,7 +166,7 @@
             <p>Our writing service can help you with application essay writing if you only start your academic life or
                 with your <span>thesis writing</span> if are graduating.</p>
         </section>
-        <div class="btn-to-top"><i class="fas fa-arrow-up"></i></div>
+        <div id="btn-to-top"><a href="#header"><i class="fas fa-arrow-up"></i></a></div>
     </div>
     <footer>
         <div class="footer-content">
@@ -204,5 +203,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

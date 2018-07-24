@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+:root {
+    --black: #626262;
+    --lime: #47c09e;
+    --white:#fff;
+}
+
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    background: var(--black);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15%;
+    box-sizing: border-box;
+}
+
+.logo a{
+    color: var(--lime);
+    font-size: 2em;
+}
+
+.menu-list{
+    display: flex;
+    justify-content: center;
+}
+
+.menu-list li{
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.menu-list li a{
+    font-size: 1em;
+    color: var(--white);
+}
+
+.acount{
+    margin-top: 5px;
+}
+
+.acount a{
+    display: block;
+    background: var(--lime);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--white);
+}
+
+.main-content{
+    width: 100%;
+}
+
+.head{
+    color: var(--white);
+    background-image: url("../img/bd1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding:40px 5%;
+}
+
+.head h2{
+    margin-bottom: 25px;
+}
+
+.head .info{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.info .left-box{
+    text-align: left;
+    width: 40%;
+    margin-right: 25px;
+}
+
+.info .left-box p{
+    margin-bottom: 15px;
+}
+
+.info .left-box ul{
+    padding: 0;
+}
+
+.info .left-box ul li:before{
+    color: var(--lime);
+    content: "•";
+    padding-right: 10px;
+    font-size: 1.5em;
+}
+
+.right-block{
+    width: 40%;
+}
+
+.form{
+    padding: 15px;
+    background: rgba(98,98,98,.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form h3{
+    margin-bottom: 15px;
+}
+
+.order-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.order-form select, #days{
+    background: rgba(98,98,98,.8);
+    border: 0;
+    color: var(--white);
+    height: 50px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.order-form select{
+    margin-bottom: 10px;
+}
+
+.dooble{
+    display: flex;
+    justify-content: center;
+}
+
+#days{
+    width: 50%;
+}
+
+.counter{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+    width: 50%;
+}
+.counter input{
+    background: rgba(98,98,98,.8);
+    border: 0;
+    color: var(--white);
+    height: 50px;
+}
+
+.less,.more{
+    display: block;
+    background: var(--black);
+    margin: 0;
+    text-align: center;
+    height: 50px;
+    padding:1px 10px;
+    cursor: pointer;
+    font-size: 2em;
+}
+
+#error{color: orangered}
+
+#submit{
+    background: var(--lime);
+    color: var(--white);
+    border: 0;
+    padding: 10px 20px;
+    margin: 5px auto;
+    width: 100%;
+}
+
+.disc{
+    color: var(--white);
+    border: 2px solid pink;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
